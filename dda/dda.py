@@ -4,28 +4,28 @@ def dda(x1, y1, x2, y2):
     delta_y = y2 - y1
 
     # Determine step value
-    abs_delta_x = abs(delta_x)
-    abs_delta_y = abs(delta_y)
-    if abs_delta_x > abs_delta_y:
-        step = abs_delta_x
+    if abs(delta_x) > abs(delta_y):
+        step = abs(delta_x)
     else:
-        step = abs_delta_y
+        step = abs(delta_y)
 
     # Calculate the increment values
     x_inc = delta_x / step
     y_inc = delta_y / step
 
     # Iterate to find coordinates represented the line
+    x = x1
+    y = y1
+    iter = 0
     print("\nStarting to draw the line...")
-    print(f"Iteration-1. Coordinate: {x1, y1}")
-    iter = 1
-    while not (x1 == x2 and y1 == y2):
+    while iter <= step:
+        u = round(x)
+        v = round(y)
         iter += 1
-        x1 += x_inc
-        y1 += y_inc
-        u = round(x1)
-        v = round(y1)
         print(f"Iteration-{iter}. Coordinate: {u, v}")
+        
+        x += x_inc
+        y += y_inc
 
 if __name__ == "__main__":
     print("Enter the first point (as integers)")
