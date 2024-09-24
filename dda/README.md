@@ -8,18 +8,25 @@ Digital Differential Analyzer adalah algoritma paling sederhana untuk menggambar
 3. Hitung selisih koordinat x ($dx$) dan koordinat y ($dy$)
 4. Tentukan step. Jika $|dx| > |dy|$, maka $step = |dx|$. Jika tidak, maka $step = |dy|$
 5. Hitung penambahan koordinat piksel.
-$$
-x_{\text{inc}} = dx / \text{step} \\
+```math
+x_{\text{inc}} = dx / \text{step}
+```
+```math
 y_{\text{inc}} = dy / \text{step}
-$$
-6. Tentukan koordinat selanjutnya.
-$$
-x = x + x_{\text{inc}} \\
+```
+
+7. Tentukan koordinat selanjutnya.
+```math
+x = x + x_{\text{inc}}
+```
+```math
 y = y + y_{\text{inc}}
-$$
-7. Lakukan pembulatan, dan tampilkan pada sistem koordinat.
-$$
-u = \text{round}(x) \\
-v = \text{round}(y) \\
-$$
-8. Ulangi langkah 6 dan 7 sampai $x = x_2$ dan $y = y_2$.
+```
+8. Lakukan pembulatan, dan tampilkan pada sistem koordinat.
+```math
+u = \text{round}(x)
+```
+``` math
+v = \text{round}(y)
+```
+9. Ulangi langkah 6 dan 7 sampai $x = x_2$ dan $y = y_2$.
